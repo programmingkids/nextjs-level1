@@ -1,6 +1,6 @@
 export default () => {
   return (
-    <div className="main">
+    <div className="my-2 text-center">
       <User name={'Elsa'} age={17} />
     </div>
   );
@@ -13,18 +13,18 @@ type Props = {
 
 const User = function ({ name, age }: Props) {
   return (
-    <div>
-      <h1>Work08</h1>
-      <div>Name: {name}</div>
-      <div>Age: {age}</div>
-    </div>
+    <>
+      <h1 className="text-4xl">Work08</h1>
+      <div className="text-lg">Name: {name}</div>
+      <div className="text-lg">Age: {age}</div>
+    </>
   );
 };
 
 // const User = ({ name, age }: Props) => (
-//   <div>
-//     <h1>Work08</h1>
-//     <div>Name: {name}</div>
-//     <div>Age: {age}</div>
-//   </div>
+//   <>
+//     <h1 className="text-4xl">Work08</h1>
+//     <div className="text-lg">Name: {name}</div>
+//     <div className="text-lg">Age: {age}</div>
+//   </>
 // );

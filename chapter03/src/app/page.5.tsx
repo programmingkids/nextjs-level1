@@ -1,6 +1,6 @@
 export default () => {
   return (
-    <div className="main">
+    <div className="my-2 text-center">
       <User name={'Bob'} age={17}>
         Work05
       </User>
@@ -16,17 +16,18 @@ type Props = {
 
 const User: React.FC<Props> = function ({ children, name, age }: Props) {
   return (
-    <div>
-      <h1>{children}</h1>
-      <div>Name: {name}</div>
-      <div>Age: {age}</div>
-    </div>
+    <>
+      <h1 className="text-4xl">{children}</h1>
+      <div className="text-lg">Name: {name}</div>
+      <div className="text-lg">Age: {age}</div>
+    </>
   );
 };
+
 // const User: React.FC<Props> = ({ children, name, age }: Props) => (
-//   <div>
-//     <h1>{children}</h1>
-//     <div>Name: {name}</div>
-//     <div>Age: {age}</div>
-//   </div>
+//   <>
+//       <h1 className="text-4xl">{children}</h1>
+//       <div className="text-lg">Name: {name}</div>
+//       <div className="text-lg">Age: {age}</div>
+//   </>
 // );

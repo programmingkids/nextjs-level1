@@ -1,7 +1,7 @@
 export default () => {
   return (
-    <div className="main">
-      <Sample16 name={'Bob'} />
+    <div className="my-2 text-center">
+      <Sample01 />
     </div>
   );
 };
@@ -36,10 +36,10 @@ const Sample04: React.FC<{ children: React.ReactNode }> = ({
 const Sample05: React.FC<{ children: React.ReactNode; name: string }> =
   function ({ children, name }: { children: React.ReactNode; name: string }) {
     return (
-      <div>
+      <>
         <h1>{children}</h1>
         <div>Name:{name}</div>
-      </div>
+      </>
     );
   };
 
@@ -51,10 +51,10 @@ const Sample06: React.FC<{ children: React.ReactNode; name: string }> = ({
   children: React.ReactNode;
   name: string;
 }) => (
-  <div>
+  <>
     <h1>{children}</h1>
     <div>Name:{name}</div>
-  </div>
+  </>
 );
 
 // function / React.FC / generics / type aliase / children / props
@@ -68,10 +68,10 @@ const Sample07: React.FC<Sample07Props> = function ({
   name,
 }: Sample07Props) {
   return (
-    <div>
+    <>
       <h1>{children}</h1>
       <div>Name:{name}</div>
-    </div>
+    </>
   );
 };
 
@@ -85,10 +85,10 @@ const Sample08: React.FC<Sample08Props> = ({
   children,
   name,
 }: Sample08Props) => (
-  <div>
+  <>
     <h1>{children}</h1>
     <div>Name:{name}</div>
-  </div>
+  </>
 );
 
 // function / JSX.Element / no props
@@ -106,10 +106,10 @@ const Sample11: ({ name }: { name: string }) => JSX.Element = function ({
   name: string;
 }): JSX.Element {
   return (
-    <div>
+    <>
       <h1>Sample11</h1>
       <div>Name: {name}</div>
-    </div>
+    </>
   );
 };
 
@@ -119,10 +119,10 @@ const Sample12: ({ name }: { name: string }) => JSX.Element = ({
 }: {
   name: string;
 }): JSX.Element => (
-  <div>
+  <>
     <h1>Sample12</h1>
     <div>Name: {name}</div>
-  </div>
+  </>
 );
 
 // function / type aliase / JSX.Element / props
@@ -134,10 +134,10 @@ const Sample13: ({ name }: Sample13Props) => JSX.Element = function ({
   name,
 }: Sample13Props): JSX.Element {
   return (
-    <div>
+    <>
       <h1>Sample13</h1>
       <div>Name: {name}</div>
-    </div>
+    </>
   );
 };
 
@@ -149,10 +149,10 @@ type Sample14Props = {
 const Sample14: ({ name }: Sample14Props) => JSX.Element = ({
   name,
 }: Sample14Props): JSX.Element => (
-  <div>
+  <>
     <h1>Sample14</h1>
     <div>Name: {name}</div>
-  </div>
+  </>
 );
 
 // function / type aliase / props / no type
@@ -162,10 +162,10 @@ type Sample15Props = {
 
 const Sample15 = function ({ name }: Sample15Props) {
   return (
-    <div>
+    <>
       <h1>Sample15</h1>
       <div>Name: {name}</div>
-    </div>
+    </>
   );
 };
 
@@ -175,8 +175,8 @@ type Sample16Props = {
 };
 
 const Sample16 = ({ name }: Sample16Props) => (
-  <div>
+  <>
     <h1>Sample16</h1>
     <div>Name: {name}</div>
-  </div>
+  </>
 );

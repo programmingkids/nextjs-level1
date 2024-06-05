@@ -1,6 +1,6 @@
 export default () => {
   return (
-    <div className="main">
+    <div className="my-2 text-center">
       <User name={'Elsa'} age={17} />
     </div>
   );
@@ -16,18 +16,18 @@ const User: ({ name, age }: Props) => JSX.Element = function ({
   age,
 }: Props) {
   return (
-    <div>
-      <h1>Work07</h1>
-      <div>Name: {name}</div>
-      <div>Age: {age}</div>
-    </div>
+    <>
+      <h1 className="text-4xl">Work07</h1>
+      <div className="text-lg">Name: {name}</div>
+      <div className="text-lg">Age: {age}</div>
+    </>
   );
 };
 
 // const User: ({ name, age }: Props) => JSX.Element = ({ name, age }: Props) => (
-//   <div>
-//     <h1>Work07</h1>
-//     <div>Name: {name}</div>
-//     <div>Age: {age}</div>
-//   </div>
+//   <>
+//     <h1 className="text-4xl">Work07</h1>
+//     <div className="text-lg">Name: {name}</div>
+//     <div className="text-lg">Age: {age}</div>
+//   </>
 // );
