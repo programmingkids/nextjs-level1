@@ -27,15 +27,15 @@ const PlayersBox = function ({ value: players }: { value: Player[] }) {
     <table className="dataTable">
       <thead>
         <tr>
-        <th>Name</th>
-        <th>Hp</th>
-        <th>Mp</th>
-        <th>Job</th>
+          <th>Name</th>
+          <th>Hp</th>
+          <th>Mp</th>
+          <th>Job</th>
         </tr>
       </thead>
       <tbody>
-        {players.map((v) => (
-          <PlayerBox value={v} />
+        {players.map((v, i) => (
+          <PlayerBox key={i} value={v} />
         ))}
       </tbody>
     </table>
