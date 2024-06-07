@@ -33,23 +33,34 @@ export default function Home() {
 const TableBox = function ({ values }: { values: Player[] }) {
   return (
     <table className="dataTable">
-      <thead>
-        <tr>
-          <th>Name</th>
-          <th>Hp</th>
-          <th>Mp</th>
-          <th>Job</th>
-        </tr>
-      </thead>
-      <tbody>
-        {values.map((v, i) => (
-          <TrBox key={i} value={v} />
-        ))}
-      </tbody>
+      <TheadBox />
+      <TbodyBox values={values} />
     </table>
   );
 };
 
+const TheadBox = function () {
+  return (
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Hp</th>
+        <th>Mp</th>
+        <th>Job</th>
+      </tr>
+    </thead>
+  );
+};
+
+const TbodyBox = function ({ values }: { values: Player[] }) {
+  return (
+    <tbody>
+      {values.map((v, i) => (
+        <TrBox key={i} value={v} />
+      ))}
+    </tbody>
+  );
+};
 const TrBox = function ({ value }: { value: Player }) {
   return (
     <tr>
