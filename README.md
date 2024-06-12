@@ -1,5 +1,5 @@
 # NextJSレベル1
-## 基礎1
+## 型注釈導入
 
 ## 対象
 JavaScript+ゲーム開発コース修了  
@@ -21,7 +21,7 @@ TypeScriptレベル2基礎修了
 TypeScriptレベル3基礎修了  
 
 ## 想定学習時間
-4時間程度  
+8時間程度  
 
 ## 前提
 * JavaScript+ゲーム開発コース修了
@@ -59,5 +59,5 @@ TypeScriptレベル3基礎修了
 * NextJSの構築
 * ReactでのTypeScriptの導入
 * Reactでの型の仕組み
-* NextJSの基礎的なルーティング
+* TypeScriptを利用したReactアプリ
 
