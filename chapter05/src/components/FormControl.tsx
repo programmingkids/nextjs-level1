@@ -34,7 +34,7 @@ export const FormControl = function () {
   }, []);
 
   return (
-    <div className="">
+    <>
       <div>
         <input
           type="text"
@@ -72,6 +72,6 @@ export const FormControl = function () {
           新規登録
         </button>
       </div>
-    </div>
+    </>
   );
 };
