@@ -7,25 +7,12 @@ export const FormControl = function () {
   const [item, setItem] = useState(initItem);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  const handleChange = function (e: React.ChangeEvent<HTMLInputElement>): void {
-    setItem((i) => ({
-      ...i,
-      [e.target.name]: e.target.value,
-    }));
-  };
+  const handleChange = function (
+    e: React.ChangeEvent<HTMLInputElement>,
+  ): void {};
 
   const handleClick = function (e: React.MouseEvent<HTMLButtonElement>): void {
     // 新規追加アクション
-    dispatch({
-      type: 'add',
-      payload: {
-        item,
-      },
-    });
-    // フォームの初期化
-    setItem(initItem);
-    // 商品にフォーカス適用
-    inputRef.current?.focus();
   };
 
   useEffect(() => {

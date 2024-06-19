@@ -10,8 +10,6 @@ export const App = function () {
     <AppProvider>
       <div className="text-center">
         <Title>ショッピングリスト</Title>
-        <FormControl />
-        <TableBox />
       </div>
     </AppProvider>
   );

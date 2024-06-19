@@ -31,30 +31,11 @@ const TableHeader = function () {
 };
 
 const TableBody = function () {
-  const {
-    state: { items },
-  } = useContext(GlobalContext);
-
-  return (
-    <tbody>
-      {items.map((item, index) => (
-        <ItemBox item={item} index={index} key={index} />
-      ))}
-    </tbody>
-  );
+  return <tbody></tbody>;
 };
 
 const ItemBox = function ({ item: { name, price, amount }, index }: ItemProps) {
-  const { dispatch } = useContext(GlobalContext);
-
-  const handleClick = function (index: number) {
-    dispatch({
-      type: 'delete',
-      payload: {
-        index,
-      },
-    });
-  };
+  const handleClick = function (index: number) {};
 
   return (
     <tr key={index}>
@@ -62,11 +43,7 @@ const ItemBox = function ({ item: { name, price, amount }, index }: ItemProps) {
       <td>{price}</td>
       <td>{amount}</td>
       <td>{Number(price) * Number(amount)}</td>
-      <td>
-        <button className="btn-sm btn-red" onClick={(e) => handleClick(index)}>
-          削除
-        </button>
-      </td>
+      <td></td>
     </tr>
   );
 };
