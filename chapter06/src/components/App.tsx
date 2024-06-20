@@ -11,9 +11,6 @@ export const App = function () {
     <AppProvider>
       <div className="text-center">
         <Title>Todoリスト</Title>
-        <Stats />
-        <FormControl />
-        <TableBox />
       </div>
     </AppProvider>
   );

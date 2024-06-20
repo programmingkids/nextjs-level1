@@ -16,16 +16,9 @@ export const FormControl = function () {
 
   const handleClick = function (e: React.MouseEvent<HTMLButtonElement>): void {
     // 新規追加アクション
-    dispatch({
-      type: 'add',
-      payload: {
-        todoForm,
-      },
-    });
-    // フォームの初期化
-    setTodoForm(initTodo);
-    // Todoにフォーカス適用
-    inputRef.current?.focus();
+    // dispatchを呼び出す　type = add, payload = { todoForm }
+    // todoFormの初期化
+    // フォーカスの設定
   };
 
   useEffect(() => {

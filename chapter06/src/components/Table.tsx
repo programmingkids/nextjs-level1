@@ -29,59 +29,37 @@ const TableHeader = function () {
 };
 
 const TableBody = function () {
-  const {
-    state: { todos },
-  } = useContext(GlobalContext);
+  // useContextでGlobalContextからtodosを取り出す
+  // <tbody>の内側でmap処理を行い、TodoBoxを呼び出す
 
-  return (
-    <tbody>
-      {todos.map((e) => (
-        <TodoBox todo={e} key={e.id} />
-      ))}
-    </tbody>
-  );
+  return <tbody></tbody>;
 };
 
 const TodoBox = function ({ todo: { id, title, isComplete } }: TodoProps) {
-  const { dispatch } = useContext(GlobalContext);
+  // useContextでGlobalContextからdispatchを取り出す
 
   const handleClickDelete = function (id: number) {
-    dispatch({
-      type: 'delete',
-      payload: {
-        id,
-      },
-    });
+    // 削除ボタンをクリックしたときの処理
+    // dispatchを呼び出す
+    // type = delete, payload { number }
   };
 
   const handleClickToggleComplete = function (id: number) {
-    dispatch({
-      type: 'toggleComplete',
-      payload: {
-        id,
-      },
-    });
+    // 完了 / 未完了ボタンをクリックしたときの処理
+    // dispatchを呼び出す
+    // type = toggleComplete, payload { number }
   };
 
+  // JSXで「削除」ボタンを配置
+  // クリックしたら「handleClickDelete」を呼び出す
+  // JSXで「完了」「未完了」のボタンを配置
+  // クリックしたら、「handleClickToggleComplete」を呼び出す
   return (
     <tr>
       <td>{id}</td>
       <td>{title}</td>
       <td>{isComplete ? '完了' : '未完了'}</td>
-      <td>
-        <button
-          className="btn-sm btn-green"
-          onClick={(e) => handleClickToggleComplete(id)}
-        >
-          {!isComplete ? '完了' : '未完了'}
-        </button>
-        <button
-          className="btn-sm btn-red"
-          onClick={(e) => handleClickDelete(id)}
-        >
-          削除
-        </button>
-      </td>
+      <td></td>
     </tr>
   );
 };

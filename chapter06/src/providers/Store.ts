@@ -10,19 +10,14 @@ export const reducer: ReducerFunc = function (
   state: State,
   action: ActionType,
 ): State {
+  // switchの分岐処理にcaseを追加する
   switch (action.type) {
-    case 'add':
-      return addTodo(state, action.payload);
-    case 'delete':
-      return deleteTodo(state, action.payload);
-    case 'toggleComplete':
-      return toggleTodoComplete(state, action.payload);
-
     default:
       return state;
   }
 };
 
+// 完成済み
 const addTodo = function (state: State, { todoForm }: { todoForm: TodoForm }) {
   const { id } = state.todos.reduce((p, e) => (p.id > e.id ? p : e), { id: 0 });
   const todo: Todo = { ...todoForm, id: id + 1 };
@@ -32,6 +27,7 @@ const addTodo = function (state: State, { todoForm }: { todoForm: TodoForm }) {
   };
 };
 
+// 完成済み
 const deleteTodo = function (state: State, { id }: { id: number }) {
   return {
     ...state,
@@ -39,6 +35,7 @@ const deleteTodo = function (state: State, { id }: { id: number }) {
   };
 };
 
+// 完成済み
 const toggleTodoComplete = function (state: State, { id }: { id: number }) {
   return {
     ...state,
